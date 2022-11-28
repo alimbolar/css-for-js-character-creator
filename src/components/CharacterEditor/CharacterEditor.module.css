@@ -4,10 +4,13 @@
 }
 
 .maxWidthWrapper {
+  border: solid red;
 }
 
 .header {
+  width: 65%;
   padding-bottom: 64px;
+  /* border: solid red; */
 }
 
 .title {
@@ -24,7 +27,34 @@
 }
 
 .characterWrapper {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: calc(1024px - 65%);
+  /* height: 500px; */
+  min-height: 500px;
 }
 
 .controlColumn {
+  /* border: solid green; */
+  width: 50%;
+  position: relative;
+}
+
+.perspectiveBar {
+  position: fixed;
+  width: 100%;
+  height: 40%;
+  bottom: 0;
+  right: 0;
+  background-color: hsl(195deg, 20%, 86%);
+}
+
+@media screen and (max-width: 700px) {
+  .controlColumn {
+    display: flex;
+    background-color: red;
+    z-index: 2;
+    align-items: flex-end;
+  }
 }
